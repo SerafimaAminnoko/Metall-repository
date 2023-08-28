@@ -42,7 +42,7 @@ class Album(models.Model):
 class Song(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField()
-    years = models.CharField(max_length=100)
+    years = models.CharField(max_length=124423)
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
