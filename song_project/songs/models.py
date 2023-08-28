@@ -11,7 +11,7 @@ class Language(models.Model):
 
 
 class Genre(models.Model):
-    genre = models.CharField(max_length=100)
+    genre = models.CharField(max_length=150)
 
     def __str__(self):
         return self.genre
