@@ -8,3 +8,14 @@ class GroupSerializer(serializers.ModelSerializer):
         model = Group
         fields = ('name', 'language', 'year', 'genre', 'slug')
 
+
+class AlbumSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Album
+        fields = ('title', 'years', 'group')
+
+
+class SongSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Song
+        fields = ('title', 'text', 'years', 'slug', 'album', 'group')

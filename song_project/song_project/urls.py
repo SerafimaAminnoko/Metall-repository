@@ -17,9 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from songs.views import GroupAPIView
+from songs.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/grouplist/', GroupAPIView.as_view())
+    path('api/v1/grouplist/', GroupAPIView.as_view()),
+    path('api/v1/groupdetail/<int:pk>/', GroupAPIPutView.as_view()),
+    path('api/v1/albumlist/', AlbumAPIView.as_view()),
+    path('api/v1/albumdetail/<int:pk>/', AlbumApiPutView.as_view()),
+    path('api/v1/songlist/', SongAPIView.as_view()),
 ]
